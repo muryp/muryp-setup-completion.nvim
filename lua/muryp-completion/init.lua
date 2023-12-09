@@ -1,0 +1,1 @@
+require 'muryp-completion.plugin'
