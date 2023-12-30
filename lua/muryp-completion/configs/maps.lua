@@ -41,7 +41,7 @@ local tab = function()
       return
     end
     fallback()
-  end, { 'i' })
+  end, { 'i', 'c', 's' })
 end
 
 local confirmCmd = function()
