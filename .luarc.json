@@ -1,6 +1,12 @@
 {
   "workspace.library": [
-    "../nvim-cmp/lua",
-    "../cmp*/lua"
+    "../nvim-cmp/lua/",
+    "../nvim-cmp/plugin/",
+    "../cmp-git/lua/",
+    "../cmp-git/plugin/",
+    "../LuaSnip/lua/",
+    "../LuaSnip/plugin/",
+    "../lspkind.nvim/lua/",
+    "../lspkind.nvim/plugin/"
   ]
 }

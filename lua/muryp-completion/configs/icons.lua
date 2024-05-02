@@ -1,5 +1,4 @@
 -- Set up nvim-cmp.
-local M = {}
 local kind_icons = {
   Text = '',
   Method = '',
@@ -16,6 +15,7 @@ local kind_icons = {
   Enum = '',
   Keyword = '',
   Snippet = '',
+  Codeium = '',
   Color = '',
   File = '',
   Reference = '',
@@ -27,18 +27,10 @@ local kind_icons = {
   Operator = '',
   TypeParameter = '',
 }
-M.setup = function(entry, vim_item)
-  -- This concatonates the icons with the name of the item kind
-  vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind)
-  -- Source
-  vim_item.menu = ({
-    buffer = '[B]',
-    nvim_lsp = '[Ls]',
-    snippy = '[S]',
-    nvim_lua = '[Lu]',
-    latex_symbols = '[La]',
-  })[entry.source.name]
-  return vim_item
-end
-
-return M
+return {
+  fields = { 'kind', 'abbr', 'menu' },
+  format = function(_, vim_item)
+    vim_item.kind = string.format(' %s ', kind_icons[vim_item.kind] or '')
+    return vim_item
+  end,
+}

@@ -1,4 +1,4 @@
-local icons = require 'muryp-completion.configs.icons'
+local formatting = require 'muryp-completion.configs.icons'
 local mapping = require 'muryp-completion.configs.maps'
 local cmp = require 'cmp'
 local window = require 'muryp-completion.configs.window'
@@ -31,9 +31,14 @@ cmp.setup {
   },
   mapping = mapping,
   sources = cmp.config.sources(sources.sc1, sources.sc2),
-  formatting = {
-    format = icons.setup,
+  window = {
+    completion = {
+      winhighlight = 'Normal:Pmenu,FloatBorder:Pmenu,Search:None',
+      col_offset = -3,
+      side_padding = 0,
+    },
   },
+  formatting = formatting,
 }
 
 require 'muryp-completion.configs.cmdLine'
