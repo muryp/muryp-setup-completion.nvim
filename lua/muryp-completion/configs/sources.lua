@@ -4,7 +4,6 @@ M.sc1 = {
   { name = 'nvim_lsp' },
   { name = 'buffer', priority = 7 },
   { name = 'path', priority = 7 },
-  { name = 'git' },
   { name = 'zsh' },
   { name = 'luasnip' }, -- For luasnip users.
   -- { name = 'snippy' },
@@ -32,6 +31,7 @@ M.sc2 = {
         'ts',
         'typescript',
         'javascript',
+        'php',
       },
     },
   },

@@ -5,7 +5,6 @@ return {
     version = false, -- last release is way too old
     event = 'InsertEnter',
     dependencies = {
-      'davidsierradz/cmp-conventionalcommits',
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-path',
@@ -41,13 +40,6 @@ return {
             end,
           },
         },
-      },
-      {
-        'petertriho/cmp-git',
-        dependencies = 'nvim-lua/plenary.nvim',
-        config = function()
-          require('cmp_git').setup()
-        end,
       },
     },
   },
